@@ -1,27 +1,27 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+  /* startje */
+  --color-text-dark: #111;
+  --color-text-light: white;
+  --color-text-brown: #5a1f06;
+  --background-header-reclame: #dce84f;
+  --color-text-header-reclame: #5a1f06;
+  --background-header-light: #efc16d;
+  --background-first-section: #007aff;
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
@@ -29,3 +29,39 @@
 
 /* jouw code */
 
+header section:first-of-type {
+  background-color: var(--background-header-reclame);
+  height: 3.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header section:first-of-type a {
+  color: var(--color-text-header-reclame);
+  font-weight: bold;
+}
+
+header section:nth-of-type(2) {
+  display: flex;
+}
+
+header section:nth-of-type(2) img {
+  width: 5em;
+}
+
+main section:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: var(--color-text-light);
+  background-color: var(--background-first-section);
+}
+
+main section:first-of-type img {
+  width: 20em;
+}
