@@ -57,6 +57,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  1. de onderlijning van linkjes in de footer hebben faalt de WCAG met een 1.45
+  2. Ook bij de promotie om een doos te personaliseren is er een geel randje op een blauwe achtergrond. Dit faalt met een 2.76
+  3. Er bestaat geen dark modus voor m&ms???
+  4. Er is geen h1 op resultaten pagina, wel op detail pagina
+  5. Tijdens h2 lezen wordt bij de producten 2 keer 'nieuw' gezegd
+  6. de hoeveelheid gram wordt gezegd en daarna zeg het euro en dan het bedrag. Lijkt het net alsof de hoeveelheid gram de aantal euros is dat het product kost.
+  7. is niet duidelijk dat de 'g' gram betekent
+  8. Wordt alleen gebruikt gemaakt van h2
+  9. Bij screenreader wordt heel de header wordt overgeslagen met de linkjes. Ook bij promotie en alle producten
+  10. geen alt tekst bij het plaatje in de footer. alt zegt niet wat het plaatje zegt
+
 
 </details>
 
@@ -68,10 +79,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown schets.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown schets dynamisch.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
