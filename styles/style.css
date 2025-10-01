@@ -79,19 +79,17 @@ main>section{
 }
 
 main>section:first-of-type{
-  background-color: var(--background-color-dark);
-  padding-top: 2em;
-}
-
-main>section:first-of-type>section {
   display: flex;
   flex-direction: column;
   color: var(--color-text-light);
+  background-color: var(--background-color-dark);
+  padding-top: 2em;
 }
 
 h1{
   order: 2;
   text-align: center;
+  padding: .25em;
 }
 
 main nav{
@@ -118,18 +116,14 @@ main nav ol li:last-child::after{
   content: "";
 }
 
-main>section:first-of-type ol li{
-  white-space: nowrap;
-}
-
-main>section:first-of-type section p{
+main>section:first-of-type p{
   order: 3;
   text-align: center;
 }
 
-
 main section:first-of-type img {
   width: 20em;
+  order: 4;
 }
 
 
@@ -195,27 +189,6 @@ main>section:nth-of-type(3) img{
 main>section:nth-of-type(3) > p{
   font-size: 1.2em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* producten */
 /* scheidingslijn */
@@ -343,34 +316,6 @@ main section:nth-of-type(4)>p{
   margin-bottom: 1em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* footer */
 footer{
   background-color: var(--background-color-light);
@@ -488,13 +433,17 @@ footer section:nth-of-type(5) a{
   color: var(--color-text-dark);
 }
 
-footer section:nth-of-type(5) p,
+footer section:nth-of-type(5) p:first-of-type,
 footer section:nth-of-type(5) p a{
   color: var(--color-text-brown);
 }
 
 footer section:nth-of-type(5) ul{
   list-style: none;
+}
+
+footer section:nth-of-type(5) ul li{
+  padding-bottom: .5em;
 }
 
 footer section:nth-of-type(5) p a{
@@ -511,10 +460,6 @@ footer section:nth-of-type(5) p a{
   color: white;
   background-color: darkblue;
 }
-
-
-
-
 
 a::after{
   content("dat tekenetjeS")
