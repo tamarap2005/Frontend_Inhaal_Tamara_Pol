@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="jouw naam" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Tamara Pol">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>M&M'S</title>
 
-    <link href="styles/style.css" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <script defer src="scripts/script.js"></script>
   </head>
   <body>
     <header>
+      <a href="#main">Sla over naar hoofdinhoud</a>
       <section>
+        <h2 class="visually-hidden">Promotie</h2>
         <p>shop onze nieuwe</p>
         <a href="#">personaliseerbare 400 g geschenkverpakkingen!</a>
       </section>
     
       <section>
+        <h2 class="visually-hidden">Hoofdnavigatie</h2>
         <button>
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#5a1f06" stroke-width="2" stroke-linecap="round"></path> <path d="M4 12L20 12" stroke="#5a1f06" stroke-width="2" stroke-linecap="round"></path> <path d="M4 6L20 6" stroke="#5a1f06" stroke-width="2" stroke-linecap="round"></path> </g></svg>
         </button>
@@ -57,7 +61,7 @@
         <ul>
           <li>
             <button>
-              <img src="images/zoekblak_icoon_small_screen.png" alt="">
+              <img src="images/zoekbalk_icoon.png" alt="">
             </button>
           </li>
           <li>
@@ -72,24 +76,45 @@
           </li>
           <li>
             <button>
-              <img src="images/winkelwagen_icoon_small-screen.png" alt="">
+              <img src="images/winkelwagen_icoon.png" alt="">
             </button>
           </li>
         </ul>
 
         <section>
-          <a href="#">
-            ontwerp uw eigen M&M's
-            <img src="images/zelf_ontwerpen.png" alt="">
-          </a>
-          <a href="#">
-            mix je M&M's Peanut
-            <img src="images/mms_mix.jpg" alt="">
-          </a>
+          <button aria-label="sluiten">x</button>
+          <h3>
+            mijn winkelmand
+          </h3>
+          <img src="images/mms_poppetje_winkelmand.avif" alt="">
+          <p>
+            Uw winkelmandje is leeg!
+          </p>
+          <p>
+            Mist u producten?
+            <a href="#">Log in</a>
+            om uw winkelmand van een vorig bezoek te zien.
+          </p>
         </section>
+
+        <ul>
+          <li>
+            <a href="#">
+              ontwerp uw eigen M&M's
+              <img src="images/zelf_ontwerpen.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              mix je M&M's Peanut
+              <img src="images/mms_mix.jpg" alt="">
+            </a>
+          </li>
+        </ul>
+      </section>
     </header>
   
-    <main>
+    <main id="main">
       <section>
         <h1>cadeaus</h1>
         <nav>
@@ -112,110 +137,128 @@
           Iedereen houdt van een persoonlijk cadeau, vooral als het zoet genoeg
           is om op te eten
         </p>
-        <img src="images/mms_cadeau.avif" alt="cadeautje" />
+        <img src="images/mms_cadeau.avif" alt="cadeautje">
       </section>
 
       <section>
+        <h2 class="visually-hidden">Cadeaus voor bijzondere momenten</h2>
         <ul>
           <li>
             <a href="#">
               <h3>verjaardag</h3>
-              <img src="images/verjaardag.avif" alt="tekening van twee ballonen">
+              <img src="images/verjaardag.avif" alt="">
             </a>
           </li>
           <li>
             <a href="#">
               <h3>bruiloft</h3>
-              <img src="images/bruiloft.avif" alt="tekening van twee trouwringen">
+              <img src="images/bruiloft.avif" alt="">
             </a>
           </li>
           <li>
             <a href="#">
               <h3>doop</h3>
-              <img src="images/doop.avif" alt="tekening van open handen die aan het midden zijn">
+              <img src="images/doop.avif" alt="">
             </a>
           </li>
           <li>
             <a href="#">
               <h3>communie</h3>
-              <img src="images/communie.avif" alt="tekening van een wijnglas">
+              <img src="images/communie.avif" alt="">
             </a>
           </li>
         </ul>
       </section>
 
       <section>
+        <h2 class="visually-hidden">Filteren en sorteren</h2>
         <button>
-          <h2> 
-            <p>filteren en sorteren</p>
+            filteren en sorteren
             <img src="images/filter_icoon.svg" alt="">
-          </h2>
         </button>
         <p>22 item(s)</p>
       </section>
 
       <section>
+        <h2 class="visually-hidden">Overzicht van cadeaus</h2>
         <ul>
-          <li>
-            <a href="#">
-              <h3>Personaliseerbare Elegante verpakking 300 gram</h3>
-              <h4>nieuw!</h4>
-              <img src="images/zelf_ontwerpen.png" alt="">
-              <p>€42,00</p>
-              <img src="images/cadeau1_small_screen.webp" alt="personaliseerbare Elegante verpakking 300 gram">
-            </a>
-            <h2 class="visually-hidden">andere sjablonen</h2>
-            <ul>
-              <li>
-                <button><img src="images/patroon_hartje.png" alt=""></button>
-              </li>
-              <li>
-                <button><img src="images/patroon_hartje_m&m.png" alt=""></button>
-              </li>
-              <li>
-                <button><img src="images/patroon_verjaardag.png" alt=""></button>
-              </li>
-              <li>
-                <button><img src="images/patroon_luchtballon.png" alt=""></button>
-              </li>
-              <li>
-                <button><img src="images/patroon_rondjes.png" alt=""></button>
-              </li>
-              <li>+4</li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              <h3>Verpakking "feest" 400 gram</h3>
-              <h4>nieuw!</h4>
-              <img src="images/zelf_ontwerpen.png" alt="">
-              <p>€39,00</p>
-              <img src="images/verpakking_feest.avif" alt="personaliseerbare Elegante verpakking 300 gram">
-            </a>
-          </li>
           <li>
             <p>Geef je cadeau een echte persoonlijke touch</p> <!--of h2???? -->
             <a href="#">Zet een foto op de verpakking en maak je cadeau extra bijzonder</a>
             <img src="images/cadeau1_small_screen.webp" alt="">
           </li>
-          <!--
-          -->
+          <li>
+            <a href="#">
+              <h3>Personaliseerbare Elegante verpakking 300 gram</h3>
+              <p>nieuw!</p>
+              <img src="images/zelf_ontwerpen.png" alt="">
+              <p>€42,00</p>
+              <img src="images/cadeau1_small_screen.webp" alt="personaliseerbare Elegante verpakking 300 gram">
+            </a>
+            <h4 class="visually-hidden">Sjablonen</h4>
+            <ul>
+              <li>
+                <button>
+                  <img src="images/patroon_hartje.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img src="images/patroon_hartje_m&m.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img src="images/patroon_verjaardag.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img src="images/patroon_luchtballon.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img src="images/patroon_rondjes.png" alt="">
+                </button>
+              </li>
+              <li>+4</li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">
+              <h3>Verpakking "feest" 400 gram</h3>
+              <img src="images/zelf_ontwerpen.png" alt="">
+              <p>€39,00</p>
+              <img src="images/verpakking_feest.avif" alt="personaliseerbare Elegante verpakking 300 gram">
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <h3>Verpakking "feest" 400 gram</h3>
+              <img src="images/zelf_ontwerpen.png" alt="">
+              <p>€39,00</p>
+              <img src="images/verpakking_feest.avif" alt="personaliseerbare Elegante verpakking 300 gram">
+            </a>
+          </li>
         </ul>
-        <p>22 van de 22 producten weergeven</p>
+        <p>4 van de 4 producten weergeven</p>
       </section>
     </main>
-    
+
     <footer>
-
-      <article>
+      <section>
+        <h2 class="visually-hidden">Voettekst</h2>
         <img src="images/mms_portret_klein.avif" alt="">
-      </article>
+      </section>
 
-      <section> <!--1-->
-        <h2 class="visually-hidden">Klantenservice</h2>
+      <section> <!--2-->
+        <h3 class="visually-hidden">Contact en vestigingen</h3>
         <ul>
           <li>
-            <h3>vind een vestiging</h3>
+            <h4>vind een vestiging</h4>
             <p>
               Bezoek onze
               <a href="#">M&M's winkels</a>
@@ -224,17 +267,21 @@
             <img src="images/locatie_icoon.png" alt="Locatie icoon">
           </li>
           <li>
-            <h3>neem contact met ons op</h3>
+            <h4>neem contact met ons op</h4>
             <a href="tel:+318000249670">+318000249670</a>
-            <time datetime="Maandag – Vrijdag: 09h00 - 17h00 uur">Maandag – Vrijdag: 09h00 - 17h00 uur</time>
+            <p>
+              Maandag – Zondag: 
+              <time datetime="09:00">09h00</time> - 
+              <time datetime="17:00">17h00</time>
+            </p>
             <img src="images/telefoon_icoon.png" alt="telefoon icoon">
           </li>
         </ul>
       </section>
       
-      <section> <!--2-->
-        <h2>Word lid van de community voor alle acties en aanbiedingen</h2>
-        <label for="">
+      <section> <!--3-->
+        <h3>Word lid van de community voor alle acties en aanbiedingen</h3>
+        <label>
           <span>e-mailadres(vereist)</span>
           <input type="email" placeholder="">
         </label>
@@ -250,8 +297,9 @@
           <button type="submit">Ik meld me aan</button>
       </section>
 
-      <section><!--3-->
-        <details>
+      <section><!--4-->
+        <h3 class="visually-hidden">Service en over ons</h3>
+        <details open>
           <summary>klantenservice</summary>
           <ul>
           <li>
@@ -275,14 +323,14 @@
         <details>
           <summary>over ons</summary>
           <ul>
-          <li><a href="#">Onze winkels</a></li>
-          <li><a href="#">Carrieres</a></li>
-        </ul>
+            <li><a href="#">Onze winkels</a></li>
+            <li><a href="#">Carrieres</a></li>
+          </ul>
         </details>
       </section>
 
-      <section> <!--4-->
-        <h2>volg ons</h2>
+      <section> <!--5-->
+        <h3>volg ons</h3>
         <ul>
           <li>
             <a href="">
@@ -323,6 +371,7 @@
       </section>
       
       <section>
+        <h3 class="visually-hidden">Juridische informatie</h3>
         <p>Proudly part of <a href="#">Mars</a></p>
         <ul>
           <li>

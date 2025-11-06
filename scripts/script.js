@@ -1,17 +1,46 @@
-let menuOpenButton = document.querySelector("header nav button");
+// winkelwagen-knop
+var openButton = document.querySelector("header > section:nth-of-type(2) > ul:nth-of-type(2) li:last-child button");
 
-menuOpenButton.addEventListener("click", openMenu);
+openButton.onclick = openMenu;
 
 function openMenu(){
-  let deNav = document.querySelector("header nav");
-  deNav.classList.add("is-open")
+  var winkelmand = document.querySelector("header > section:nth-of-type(2) > section");
+  winkelmand.classList.add("toonMenu");
 }
 
-let menuSluiten = document.querySelector("header nav button")
+/* sluiten */
+var sluitButton = document.querySelector("header > section:nth-of-type(2) > section button");
 
-menuSluiten.addEventListener("click", sluitMenu)
+sluitButton.onclick = sluitMenu;
 
-function sluitMenu(){
-  let deNav = document.querySelector("header nav");
-  deNav.classList.remove("is-open")
+function sluitMenu() {
+  var deNav = document.querySelector("header > section:nth-of-type(2) > section");
+  deNav.classList.remove("toonMenu");
 }
+
+/* summary opengeklapt */
+/* source: chatgpt. Ik kan het niet uitleggen */
+function handleDetails() {
+  const detailsList = document.querySelectorAll("details");
+  const isDesktop = window.innerWidth >= 1024;
+
+  detailsList.forEach(details => {
+    const summary = details.querySelector("summary");
+
+    if (isDesktop) {
+      // Open en deactiveer toggle
+      details.setAttribute("open", "");
+      summary.style.pointerEvents = "none";
+    } else {
+      // Herstel normaal gedrag
+      details.removeAttribute("open");
+      summary.style.pointerEvents = "auto";
+    }
+  });
+}
+
+// Bij het laden van de pagina
+window.addEventListener("load", handleDetails);
+
+// Bij het resizen van het scherm
+window.addEventListener("resize", handleDetails);

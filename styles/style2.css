@@ -1,28 +1,16 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
   /* startje */
-    --color-text-dark: #111;
+  --color-text-dark: #111;
   --color-text-light: white;
   --color-text-brown: #5a1f06;
-  --background-header-reclame: #dce84f;
-  --color-text-header-reclame: #5a1f06;
-  --background-header-light: #efc16d;
-  --background-color-dark: #007aff;
+  --color-text-email-light: #68717D;
+  --background-reclame-light: #dce84f;
+  --background-light: #efc16d;
+  --background-dark: #0E74E1;
   --background-footer-image: #ffd200;
-  --background-color-light: #f3f6fa;
   --background-color-light-grey: #F3F6FA;
   --background-bruiloft: #8A0047;
   --background-doop: #8ACEFF;
@@ -32,221 +20,486 @@
   --color-hover-ontdek: #00A832;
   --color-hover-bedrijfsruimte:#0E74E1;
   --color-selection-dark: #123A9F;
+  --background-nieuw: #005E20;
 }
 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+/* nav bar */
+main section:first-of-type nav ol{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
 }
 
-/****************/
-/* JOUW STYLING */
-/****************/
+main section:first-of-type nav ol li a{
+  color: var(--color-text-dark);
+  text-decoration: none;
+}
 
-/* nav bar */
-/* nav bar */
-/* nav bar */
-header>section:nth-of-type(2) img{
+main section:first-of-type nav ol li::after{
+  content: "/";
+  margin-right: .5em;
+}
+
+main section:first-of-type nav ol li:last-child::after{
+  content: "";
+}
+
+main > section:nth-of-type(2){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: .5em 0;
+}
+
+main > section:nth-of-type(2) h1{
+  color: var(--color-text-brown);
+  font-size: 2em;
+}
+
+main > section:nth-of-type(2) img{
+  width: 18em;
+  height: auto;
+}
+
+main > section:nth-of-type(2) p{
+  font-size: .6em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  padding: .5em .8em;
+  width: min-content;
+  background-color: var(--background-nieuw);
+  border-radius: 10em;
+  margin: 2em 0;
+}
+
+main > section:nth-of-type(3) > p:first-of-type,
+main > section:nth-of-type(3) > p:nth-of-type(2),
+main > section:nth-of-type(3) > p:nth-of-type(3){
+  margin-top: 1.5em
+}
+
+/* details */
+main > section:nth-of-type(3) summary::before{
+  display: block;
+  content: "Toon volledige product omschrijving";
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--color-text-brown);
+  text-decoration: underline solid 2px var(--background-footer-image);
+  text-underline-offset: .3em;
+  margin-bottom: .5em;
+}
+
+main > section:nth-of-type(3) summary::after{
+  display: inline;
+  content: "...";
+}
+
+main > section:nth-of-type(3) details[open] summary::after{
+  content: "";
+}
+
+main > section:nth-of-type(3) summary::marker{
+  content: none;
+}
+
+main > section:nth-of-type(3) h2{
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* geld*/
+main > section:nth-of-type(3) > p:first-of-type{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* geld en kies sjabloon */
+main > section:nth-of-type(3) > p:nth-of-type(2) output{
+  font-weight: bold;
+}
+
+main > section:nth-of-type(3) > ul{
+  display: flex;
+  list-style: none;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+main > section:nth-of-type(3) > ul button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: solid .1em gray;
+  background-color: transparent;
 }
 
-@media (max-width: 1024px) {
-
-  header > section:nth-of-type(2){
-    display: grid;
-    grid-template-columns: 1fr 15% 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  header > section:nth-of-type(2) button{
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-
-  header > section:nth-of-type(2) > img{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    width: 5.5em;
-  }
-
-  header > section:nth-of-type(2) nav{
-    display: none;
-  }
-
-  header > section:nth-of-type(2) > ul{
-    grid-column: 3/4;
-    grid-row: 1/2;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-  }
-
-  header>section:nth-of-type(2) > ul li:nth-of-type(2),
-  header>section:nth-of-type(2) > ul li:nth-of-type(3){
-     display: none;
-
-  }
-
-  header > section:nth-of-type(2) > section:first-of-type{
-    grid-column: 1/-1;
-    grid-row: 2/3;
-  }
+main > section:nth-of-type(3) > ul li:first-of-type button{
+  outline: solid .15em var(--color-text-brown);
+  outline-offset: .15em;
 }
 
-@media (min-width: 1024px){
-
-  header > section:nth-of-type(2){
-    display: grid;
-    grid-template-columns: max-content max-content 1fr max-content;
-    grid-template-rows: 1fr;
-    gap: 1em;
-  }
-
-  header > section:nth-of-type(2) button svg{
-    display: none;
-  }
-
-  header > section:nth-of-type(2) > img{
-    grid-column: 1/2;
-    grid-row: 1/-1;
-    width: 7em;
-  }
-
-  header > section:nth-of-type(2) nav{
-    grid-column: 2/3;
-    grid-row: 1/-1;
-  }
-
-  header > section:nth-of-type(2) > ul{
-    grid-column: 4/5;
-    grid-row: 1/-1;
-  }
-
-  header > section:nth-of-type(2) section:first-of-type{
-    grid-column: 3/4;
-    grid-row: 1/-1;
-  }
-
-  header > section:nth-of-type(2) section:first-of-type a{
-    height: 3em;
-    width: max-content;
-    padding: 0 1.5em;
-    background-color: var(--background-color-light-grey);
-    border: solid .1em var(--color-text-dark);
-    border-radius: 2em;
-  }
-
+main > section:nth-of-type(3) > ul li:hover{
+  outline: solid .15em gray;
+  outline-offset: .1em;
+  border-radius: 50%;
 }
 
-/* logo */
-
-
-/* burger menu */
-header > section:nth-of-type(2) button{
-  display: flex;
-  justify-content: flex-start;
-  align-self: center;
-  width: max-content;
-  height: max-content;
-  border: none;
-  background: none;
-}
-
-header > section:nth-of-type(2) button svg{
+main > section:nth-of-type(3) > ul img{
   width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
 }
 
-/* nav */
-header section:nth-of-type(2) nav {
+/* aantallen knop*/
+main > section:nth-of-type(3) > form{
   display: flex;
-  justify-content: start;
   align-items: center;
+  gap: .5em;
+  margin-top: 1em;
 }
 
-header section:nth-of-type(2) nav ul{
-  display: flex;
-  list-style: none;
-  gap: 2em;
-}
-
-header section:nth-of-type(2) nav a{ /* ik snap niet waarom */
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  text-decoration: none;
-  color: var(--color-text-brown);
+main > section:nth-of-type(3) > form button{
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: transparent;
   font-weight: bold;
 }
 
-header section:nth-of-type(2) nav li a:hover{
-  text-underline-offset: 1.7em;
+main > section:nth-of-type(3) > form button:first-of-type{
+  color: grey;
+  border: solid .15em;
 }
 
-header section:nth-of-type(2) nav li:nth-of-type(1) a:hover {
-  text-decoration: underline 5px var(--color-hover-producten);
+main > section:nth-of-type(3) > form button:first-of-type:hover{
+  color: var(--color-text-light);
+  background-color: gray;
 }
 
-header section:nth-of-type(2) nav li:nth-of-type(2) a:hover {
-  text-decoration: underline 5px var(--color-hover-momenten);
+main > section:nth-of-type(3) > form button:nth-of-type(2){
+  color: var(--color-text-brown);
+  border: solid .15em;
 }
 
-header section:nth-of-type(2) nav li:nth-of-type(3) a:hover {
-  text-decoration: underline 5px var(--color-hover-ontdek);
+main > section:nth-of-type(3) > form button:nth-of-type(2):hover{
+  color: var(--color-text-light);
+  background-color: var(--color-text-brown);
 }
 
-header section:nth-of-type(2) nav li:nth-of-type(4) a:hover {
-  text-decoration: underline 5px var(--color-hover-bedrijfsruimte);
+main > section:nth-of-type(3) > form input{
+  text-align: center;
+  width: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: none;
 }
 
-header section:nth-of-type(2) nav img{ 
-  height: 2.5em;
-  width: auto;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/* https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box */
+
+/* aantalen schijdings lijn */
+main > section:nth-of-type(3) > p:last-of-type{
+  margin: 1em 0 1em 0;
+}
+
+main > section:nth-of-type(3)::after{
+  display: block;
+  content: "";
+  height: .1em;
+  width: 100%;
+  background-color: var(--color-text-brown);
+  margin: 2em 0 1em 0;
+}
+
+/* op maat maken */
+main > section:nth-of-type(4) h2{
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--color-text-brown);
+}
+
+main > section:nth-of-type(4) p:first-of-type{
+  font-size: .9em;
+}
+
+main > section:nth-of-type(4) p:first-of-type::before{
+  content: "(";
+}
+
+main > section:nth-of-type(4) p:first-of-type::after{
+  content: ")";
+}
+
+main > section:nth-of-type(4) p:nth-of-type(2){
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--background-nieuw);
+  margin: 1em 0;
+}
+
+main > section:nth-of-type(4) button{
+  width: 100%;
+  color: var(--color-text-brown);
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1em 3em;
+  border: solid .1em;
+  background-color: transparent;
+  border-radius: 2em;
+}
+
+main > section:nth-of-type(4) button:hover{
+  box-shadow: -.3em .3em var(--color-text-brown);
+  transition: .2s;
+}
+
+main > section:nth-of-type(4)::after{
+  display: block;
+  content: "";
+  height: .1em;
+  width: 100%;
+  background-color: var(--color-text-brown);
+  margin: 2em 0 1em 0;
+}
+
+/* bezorging */
+main > section:nth-of-type(5) button:first-of-type{
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--color-text-brown);
+  background-color: transparent;
+  border: none;
+  text-decoration: underline solid 1px var(--background-footer-image);
+  text-underline-offset: .3em;
+}
+
+main > section:nth-of-type(5) button:first-of-type:hover{
+  text-decoration: none;
+}
+
+main > section:nth-of-type(5) button:nth-of-type(2){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--color-text-brown);
+  width: 100%;
+  border: none;
+  background-color: var(--background-footer-image);
+  padding: 1em 2em;
+  border-radius: 5em;
+  margin: 2em 0;
+}
+
+main > section:nth-of-type(5) button:nth-of-type(2):hover{
+  box-shadow: -.3em .3em var(--color-text-brown);
+  transition: .2s;
+}
+
+main > section:nth-of-type(5) button:nth-of-type(2) img{
+  width: 2em;
+  height: auto;
+}
+
+main > section:nth-of-type(5) button:nth-of-type(2) p:first-of-type{
+  text-align: start;
+  width: 60%;
+}
+
+main > section:nth-of-type(5) > section {
+  display: flex;
+  position: relative;
+}
+
+main > section:nth-of-type(5) > ul{
+  gap: 1em;
+  background-color: grey;
+  padding: 2em 1em;
+  border-radius: 1em;
+}
+
+main > section:nth-of-type(5) ul li{
+  display: flex;
+  gap: .5em;
+}
+
+main > section:nth-of-type(5) ul img{
+  width: 2em;
+  height: 2em;
+}
+
+main > section:nth-of-type(5) ul p{
+  width: 65%;
+}
+
+main > section:nth-of-type(5) > section > img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+main > section:nth-of-type(5)::after{
+  display: block;
+  content: "";
+  height: .1em;
+  width: 100%;
+  background-color: var(--color-text-brown);
+  margin: 2em 0 1em 0;
+}
+
+/* productinformatie */
+main > section:nth-of-type(6) details:first-of-type::after,
+main > section:nth-of-type(6) details:nth-of-type(2)::after{
+  display: block;
+  content: "";
+  height: .1em;
+  width: 100%;
+  background-color: var(--color-text-brown);
+}
+
+main > section:nth-of-type(6) details summary {
+  list-style: none; /* verwijdert pijltje */
+  cursor: pointer;
+  position: relative;
+  color: var(--color-text-brown);
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+main > section:nth-of-type(6) details summary::after {
+  content: "^";
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform 0.2s;
+}
+
+main > section:nth-of-type(6) details[open] summary::after {
+  transform: rotate(180deg); /* Pijl draait naar beneden wanneer open */
+}
+
+/* voedingsinformatie */
+main > section:nth-of-type(6) details:last-of-type section:first-of-type{
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content 1fr ;
+  column-gap: 2em;
+  row-gap: 1em;
+  margin-bottom: 2em;
+}
+
+main > section:nth-of-type(6) details:last-of-type section:first-of-type h4{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+main > section:nth-of-type(6) details:last-of-type section:first-of-type p{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: 1.5em;
+}
+
+main > section:nth-of-type(6) details:last-of-type section:first-of-type img {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  width: 7.5em;
+  height: auto;
+}
+
+main > section:nth-of-type(6) details:last-of-type > p{
+  margin: 1em 0;
+}
+
+/* tabel */
+table{
+  width: 100%;
+  padding: 1em .5em;
+  border: solid 2px var(--color-text-brown);
+  border-radius: .5em;
+  border-collapse: collapse;
+}
+
+td {
+  padding: .5em;
+}
+
+tr:not(:last-child) td{
+  border-bottom: 1px solid #ccc;
 }
 
 
-/* buttons */
- header > section:nth-of-type(2) > ul{
-    display: flex;
-    justify-content: end;
-    align-items: center;
+table th{
+  text-align: start;
+  color: var(--color-text-brown);
+  width: 50%;
+}
+
+table tr td:first-of-type{
+  font-weight: bold;
+}
+
+
+/* Zorg dat de h4 en p naast elkaar blijven */
+/* main > section:nth-of-type(6) details p{
+  margin-bottom: 3em;
+}
+*/
+
+
+
+
+@media (min-width: 1024px) {
+  main {
+    padding: 0 10em;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    position: relative;
   }
 
-header > section:nth-of-type(2) > ul{
-  display: flex;
-  gap: 1em;
-  list-style: none;
-}
+  main > * {
+    padding: 0;
+  }
 
-header > section:nth-of-type(2) a {
-  color: var(--color-text-brown);
-  font-weight: bold;
-  text-decoration: none;
-}
+  main > section:not(:nth-of-type(2)) {
+    grid-column: 2 / 3;
+  }
 
-header>section:nth-of-type(2) > ul li img{
-  width: 1.5em;
-}
+  main > section:nth-of-type(2) {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    position: relative;
+  }
 
-/* ontwerp/mix */
-header > section:nth-of-type(2) > section:first-of-type{
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 1em;
-}
+  main > section:nth-of-type(2) h1{
+    grid-column: 2/3;
+  }
 
-header > section:nth-of-type(2) > section:first-of-type a{
-  display: flex;
-  align-items: center;
-  column-gap: .5em;
-}
+  main > section:nth-of-type(2) img,
+  main > section:nth-of-type(2) p{
+    grid-column: 1/2;
+    position: sticky;
+    top: 2em;
+  }
 
-header > section:nth-of-type(2) > section:first-of-type img{
-  order: -10;
-  width: 1.5em;
+  main > section:nth-of-type(2) img{
+    width: 30em;
+  }
+
+  main > section:nth-of-type(3) details{
+    margin: 0;
+  }
 }
