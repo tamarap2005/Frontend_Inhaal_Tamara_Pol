@@ -79,10 +79,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/breakdown schets.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown-schets.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/breakdown schets dynamisch.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown-schets-dynamisch.jpg.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
@@ -99,7 +99,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik heb moeite met bepalen wat een heading moet zijn en welke. Voor mij is nog onduidelijk hoe ik mijn header overzet in html aangezien er zoveel losse stukjes zijn.
 
 
   ### Agenda voor meeting
@@ -132,7 +132,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik ben al een eind opgeschoven met de footer. Dat ging makkelijker dan ik dacht. Er zitten wel paar moeilijke stukjes in zoals email en het grote m&m plaatje. Ik heb voor de email youtube videos gekeken, maar ik kom er maar niet uit.
 
 
   ### Agenda voor meeting
@@ -151,10 +151,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Ik heb geleerd hoe ik de email moet doen.
+  - ik deed op de verkeerde selector display flex.
+  - Ik heb geleerd dat je met content ::after en absolute het stukje van de footer kan maken.
 
 </details>
 
@@ -170,6 +169,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  - Ik dacht mijn website verbeterd te hebben door de juiste headings te geven. Bleek dat ik de eerste test verkeerd had gedaan. De echte website maakt gebruik van h1 tot h4, en ik dacht alleen h2.
+  - Echte website had geen dark mode. Heb ik nu ook niet, maar mijn werk die ik nu heb was voldoende om het vak te halen.
+  - Ik heb van de 300 g veranderd naar 300 gram zodat duidelijker is wat de g inhoudt.
+  - Ik heb de tekst die in het eerste plaatje van de footer staat, gezet in de alt tekst.
+  - Ik heb de onderlijningen dikker gemaakt bij bijvoorbeeld hovers van linkjes zodat het duidelijker is.
+
+<img src="readme-images/WCAG-pagina-1.jpeg" width="375px" alt="uitkomst test 2">
+<img src="readme-images/WCAG-pagina-2.jpeg" width="375px" alt="uitkomst test 2">
+<img src="readme-images/WCAG-pagina-3.jpeg" width="375px" alt="uitkomst test 2">
+<img src="readme-images/WCAG-pagina-4.jpeg" width="375px" alt="uitkomst test 2">
+<img src="readme-images/WCAG-pagina-5.jpeg" width="375px" alt="uitkomst test 2">
+
 </details>
 
 
@@ -182,7 +193,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik heb mijn header eindelijk af, ik heb gekozen om javascript daarin weg te laten. En ik ben bezig met dingen responsive te maken.
 
 
   ### Agenda voor meeting
@@ -200,10 +211,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Svg is niet gelukt, ik heb png gebruikt.
+  - Summary uitklappen is wel gelukt.
 
 </details>
 
@@ -217,17 +226,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/karakterstiek-afbeelding.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik geleerd hoe belangrijk het is om aanwezig te zijn bij de lessen, en ook actief erin te zijn. Zo had ik eerste moeite met display flex en alle mogelijkheden daarom heen, maar door de les opdrachten te doen zoals froggy met de flex-direction, heb ik het beter onder de knie gekregen. Ik zie ook steeds beter hoe ik headings moet gebruiken en wat het nut ervan is.
+
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik blijf het lastig vinden om te bepalen wanneer je bij align of justify, content items self erachter moet zetten. Vaak doe ik het goed, maar soms is het nog wel een beetje gokken. En het gebruik van svgs vond ik lastig. Het lukte mij niet om ze zichtbaar in mijn website te krijgen. 
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
@@ -245,8 +255,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Sanne
+  2. Studentenassistenten
+  3. Chatgpt (errors wegwerken en om summary uitgeklapt te houden)
+  4. https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box
+  5. Lesopdrachten > javascript, positioneren, flex-direction
+  6. https://www.a11yproject.com/posts/how-to-hide-content/
+  7. w3schools > tabel, input type=date, details, shadow hover, overflow
+  8. MDN > text-decoration, :not, overflow
+  9. CSS tricks > grid
 
 </details>

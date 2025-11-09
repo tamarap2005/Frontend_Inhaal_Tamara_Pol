@@ -1,28 +1,3 @@
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-  /* startje */
-  --color-text-dark: #111;
-  --color-text-light: white;
-  --color-text-brown: #5a1f06;
-  --color-text-email-light: #68717D;
-  --background-reclame-light: #dce84f;
-  --background-light: #efc16d;
-  --background-dark: #0E74E1;
-  --background-footer-image: #ffd200;
-  --background-color-light-grey: #F3F6FA;
-  --background-bruiloft: #8A0047;
-  --background-doop: #8ACEFF;
-  --background-communie: #FFABDF;
-  --color-hover-producten: #D70100;
-  --color-hover-momenten: #FA6400;
-  --color-hover-ontdek: #00A832;
-  --color-hover-bedrijfsruimte:#0E74E1;
-  --color-selection-dark: #123A9F;
-  --background-nieuw: #005E20;
-}
-
 /* nav bar */
 main section:first-of-type nav ol{
   display: flex;
@@ -199,14 +174,13 @@ main > section:nth-of-type(3) > form input{
   border: none;
 }
 
+/* bron: https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
-
-/* https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box */
 
 /* aantalen schijdings lijn */
 main > section:nth-of-type(3) > p:last-of-type{
@@ -327,8 +301,13 @@ main > section:nth-of-type(5) > section {
 main > section:nth-of-type(5) > ul{
   gap: 1em;
   background-color: grey;
-  padding: 2em 1em;
+  padding: 2em 5em 2em 1em;
   border-radius: 1em;
+  background-image: url(/images/social_icoon.png);
+  background-size: 3em auto;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 3em) bottom;
+
 }
 
 main > section:nth-of-type(5) ul li{
@@ -388,7 +367,7 @@ main > section:nth-of-type(6) details summary::after {
 }
 
 main > section:nth-of-type(6) details[open] summary::after {
-  transform: rotate(180deg); /* Pijl draait naar beneden wanneer open */
+  transform: rotate(180deg);
 }
 
 /* voedingsinformatie */
@@ -451,16 +430,6 @@ table tr td:first-of-type{
   font-weight: bold;
 }
 
-
-/* Zorg dat de h4 en p naast elkaar blijven */
-/* main > section:nth-of-type(6) details p{
-  margin-bottom: 3em;
-}
-*/
-
-
-
-
 @media (min-width: 1024px) {
   main {
     padding: 0 10em;
@@ -491,7 +460,7 @@ table tr td:first-of-type{
   main > section:nth-of-type(2) img,
   main > section:nth-of-type(2) p{
     grid-column: 1/2;
-    position: sticky;
+    position: absolute;
     top: 2em;
   }
 
@@ -502,4 +471,24 @@ table tr td:first-of-type{
   main > section:nth-of-type(3) details{
     margin: 0;
   }
+}
+
+@media (min-width: 1024px) {
+    main > section:nth-of-type(2) {
+        /* grid-column: 1 / -1; */
+        display: grid;
+        grid-template-columns: 70% 30%;
+        position: relative;
+        grid-row: 1 / 3;
+        position: sticky;
+        top: 4em;
+        align-self: start;
+    }
+}
+main > section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: .5em 0;
 }
